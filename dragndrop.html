@@ -1,0 +1,30 @@
+<head>
+  <title>Kanban</title>
+</head>
+
+<body>
+  <h1>Kanban</h1>
+
+  {{> list}}
+</body>
+
+<template name="list">
+<div id="list1" class="item-list">
+  {{#each items 1}}
+    {{> listItem}}
+  {{/each}}
+</div>
+
+<div id="list2" class="item-list">
+  {{#each items 2}}
+    {{> listItem}}
+  {{/each}}
+</div>
+
+</template>
+
+<template name="listItem">
+  <div class="item">
+    {{title}} <!-- (rank: {{rank}}) -->
+  </div>
+</template>
